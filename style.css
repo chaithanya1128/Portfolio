@@ -959,4 +959,94 @@ section:nth-child(odd) .animate.scroll,
     100% {
         width: 0;
     }
+}/* Projects Section */
+/* Importing Cool Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400&display=swap');
+
+.projects {
+    background: var(--second-bg-color);
+    padding-bottom: 6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.projects h2 {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif; /* Different font for headings */
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.projects .projects-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.projects .projects-column {
+    flex: 1 1 45%;
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects .projects-column:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.projects-column h3 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.projects-column p {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+.projects-column ul {
+    margin-left: 1.5rem;
+}
+
+.projects-column ul li {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+/* Media Queries for Projects Section */
+@media (max-width: 768px) {
+    .projects .projects-column {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .projects h2 {
+        font-size: 3.5rem;
+    }
+
+    .projects-column h3 {
+        font-size: 2rem;
+    }
+
+    .projects-column p,
+    .projects-column ul li {
+        font-size: 1.4rem;
+    }
 }
